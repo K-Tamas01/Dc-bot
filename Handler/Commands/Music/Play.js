@@ -15,8 +15,8 @@ module.exports = {
 							const queue = bot.player.createQueue(msg.guild.id);
 							await queue.join(msg.member.voice.channel);
 							await queue.play(args.join(' ')).catch((err) => {
-								console.log(err);
 								if (!guildqueue) {
+									error.run(msg, -1, err.message);
 									queue.stop();
 								}
 							});
@@ -33,6 +33,7 @@ module.exports = {
 							await queue.playlist(args.join(' ')).catch((err) => {
 								console.log(err);
 								if (!guildqueue) {
+									error.run(msg, -1, err.message);
 									queue.stop();
 								}
 							});

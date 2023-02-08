@@ -35,7 +35,7 @@ module.exports = {
 						.setTimestamp();
 
 					for (let i = min_part; i < max_part; i++) {
-						content.addField(guildqueue.songs[i].name, ' [' + guildqueue.songs[i].duration + ']');
+						content.addFields({ name: guildqueue.songs[i].name, value: ' [' + guildqueue.songs[i].duration + ']', inline: false });
 					}
 				}
 				else {
@@ -46,7 +46,7 @@ module.exports = {
 						.setTimestamp();
 
 					for (let i = min_part; i < max_part; i++) {
-						content.addField(guildqueue.songs[i].name, ' [' + guildqueue.songs[i].duration + ']');
+						content.addFields({ name: guildqueue.songs[i].name, value: ' [' + guildqueue.songs[i].duration + ']', inline: false });
 					}
 				}
 				msg.channel.send({ embeds: [content] });
