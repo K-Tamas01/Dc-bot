@@ -1,3 +1,0 @@
-- [ ] Discord bot tárolja a szervereit Mongo DB-ben
-- [ ] Twitch parancsok beállítása és az adatokat felvinni Mongo-ba.
-- [ ] Youtube parancsok beállítása és az adatokat felvinni Mongo-ba.
