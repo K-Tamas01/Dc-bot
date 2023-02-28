@@ -173,7 +173,7 @@ bot.on('ready', () => {
 		const status = stat[Math.floor(Math.random() * stat.length)];
 		bot.user.setPresence({
 			activities: [{ name: status, type: Discord.ActivityType.Watching }],
-			status: 'dnd',
+			status: 'online',
 		});
 	}, 5000);
 });
